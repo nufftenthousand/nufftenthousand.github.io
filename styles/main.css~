@@ -1,0 +1,36 @@
+body {
+}
+#container {
+	margin: 2em auto 3em auto;
+	width: 800px;
+}
+a.shiny {
+	text-decoration: none;
+}
+.navi {
+	display: block;
+	list-style-type: none;
+}
+.navi li {
+	float: left;
+}
+.navi a {
+	display: block;
+	background-color:#63E45A;
+	padding: .5em 1em;
+	text-decoration: none;
+	color: #511151;
+}
+.navi a:hover {
+	background-color: #F9FE64;
+}
+.navi a:active {
+	
+}
+.navi a:visited {
+	
+}
+.blue {
+	text-decoration: none;
+	color: red;
+}
