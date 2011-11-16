@@ -15,12 +15,15 @@
 }
 #navi li {
 	float: left;
-	margin: 0 1em 1em 0;
+	margin: 0 0.9em 1em 0;
 }
 #content {
 	clear: both;
 	padding: 1.2em 15%;
 	margin: 1.2em 0 2em;
+}
+#content p {
+	line-height: 1.1em;
 }
 .about_section p {
 	margin: 0 0 0.5em 0;
@@ -48,7 +51,7 @@
 
 body {
 	background-color: #FAFAFA;
-	font-family: "Helvetica Neue";
+	font-family: 'Chivo', sans-serif;
 }
 h1{
 	font-weight: 500;
@@ -71,6 +74,7 @@ p {
 	font-size: 2em;
 }
 #content {
+	font-family: 'Arial', sans-serif;
 	background-color: #FFF;
 	color: #454545;
 }
