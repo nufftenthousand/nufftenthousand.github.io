@@ -5,12 +5,12 @@ $(document).ready(function(){
 		$('.shiny').hover(
 			function(){
 				$(this).children().each(function(i){
-					$(this).delay(i*55).fadeTo(200, 0.5);
+					$(this).delay(i*55).fadeTo(200,0.5);
 				})
 			},
 			function(){
 				$(this).children().each(function(i){
-					$(this).delay(i*55).fadeTo(200, 1);
+					$(this).delay(i*55).fadeTo(200,1);
 				});
 			}
 		);
