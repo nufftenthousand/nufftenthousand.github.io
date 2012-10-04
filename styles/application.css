@@ -48,7 +48,7 @@
 ********************************/
 
 body {
-	background-color: #FAFAFA;
+	background: #FAFAFA url('office.png');
 	font-family: 'Chivo', sans-serif;
 }
 h1{
@@ -73,7 +73,7 @@ p {
 }
 #content {
 	font-family: 'Arial', sans-serif;
-	background-color: #FFF;
+	background-color: #D1D1D1;
 	color: #454545;
 }
 #contact {
@@ -82,13 +82,13 @@ p {
 #contact p {
 	font-size: 3.2em;
 	border-left: 1px solid grey;
-	color: #454545;
+	color: #D1D1D1;
 }
 .links li a {
 	color: #63E45A;
 }
 .grey {
-	color: #454545;
+	color: #D1D1D1;
 }
 .blue {
 	color: #524DFF;
@@ -97,12 +97,12 @@ p {
 	color: #63E45A;
 }
 .whisper {
-	color: #DFDFDF;
+	color: #333333;
 }
 .shadow {
-	-moz-box-shadow: 0 0 20px #000000;
-	-webkit-box-shadow: 0 0 20px #000000;
-	box-shadow: 0 0 20px #000000;
+	-moz-box-shadow: 0 0 50px #000000;
+	-webkit-box-shadow: 0 0 50px #000000;
+	box-shadow: 0 0 50px #000000;
 }
 
 
