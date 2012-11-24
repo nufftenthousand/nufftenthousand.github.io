@@ -147,8 +147,15 @@ hr {
 
 
 @media screen and (max-width: 519px) {
-	#header, #content, #footer, hr {
-		margin-right: 0;
-		margin-left: 0;
+	h1 {
+		font-size: 78px;
+	}
+	h2 {
+		font-size: 52px;
+	}
+	p {
+		font-size: 36px;
+		line-height: 1.15em;
+		margin: .3em .5em;
 	}
 }
