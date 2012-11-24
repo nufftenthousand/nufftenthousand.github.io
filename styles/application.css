@@ -142,7 +142,24 @@ hr {
 ********************************/
 
 @media screen and (max-width: 767px) {
-
+	#header, #content, #footer, hr {
+		margin-right: 1em;
+		margin-left: 1em;
+	}
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 36px;
+	}
+	p {
+		font-size: 24px;
+		line-height: 1.15em;
+		margin: .3em .5em;
+	}
+	.nav a {
+		font-size: 24px;
+	}
 }
 
 
