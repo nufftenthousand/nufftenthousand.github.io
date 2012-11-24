@@ -49,6 +49,9 @@ a {
 a:hover {
 	opacity: 1;
 }
+.nav a {
+	font-size: 42px;
+}
 
 
 /*	MAIN MARGINS 
@@ -72,9 +75,6 @@ a:hover {
 
 .nav {
 	display: inline-block;
-}
-.nav a {
-	font-size: 42px;
 }
 
 
@@ -147,15 +147,22 @@ hr {
 
 
 @media screen and (max-width: 519px) {
+	#header, #content, #footer, hr {
+		margin-right: 0;
+		margin-left: 0;
+	}
 	h1 {
-		font-size: 78px;
+		font-size: 36px;
 	}
 	h2 {
-		font-size: 52px;
+		font-size: 24px;
 	}
 	p {
-		font-size: 36px;
+		font-size: 18px;
 		line-height: 1.15em;
 		margin: .3em .5em;
+	}
+	.nav a {
+		font-size: 18px;
 	}
 }
