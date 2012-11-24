@@ -8,8 +8,8 @@ $(document).ready(function(){
 	var offset = 4; 
 	var random = false;
 	var radius = 100;
-	var screenWidth = screen.width * 2;
-	var screenHeight = screen.height * 2;
+	var screenWidth = 2880;//screen.width * 2;
+	var screenHeight = 2880;//screen.height * 2;
 	var totalCols = Math.floor( screenWidth / width );
 	var totalRows = Math.ceil( screen.height / height );
 
