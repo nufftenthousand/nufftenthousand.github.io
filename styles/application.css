@@ -1,4 +1,4 @@
-/*	DOCUMENT AND BACKGROUND 
+/*	DOCUMENT
 ********************************/
 
 html {
@@ -22,6 +22,60 @@ body {
 #page {
 	height: 100%;
 	overflow-y: auto;
+}
+
+
+/*	BACKGROUND 
+********************************/
+
+#floor .row {
+	width: 100%;
+	height: 33.33%;
+	display: block;
+}
+.tile {
+	margin: 0;
+	padding: 0;
+	width: 25%;
+	height: 100%;
+	border-radius: 90px;
+	display: inline-block;
+}
+.d_row_0 .d_col_0 {
+	background-color: #6d6c4c;
+}
+.d_row_0 .d_col_1 {
+	background-color: #7d929a;
+}
+.d_row_0 .d_col_2 {
+	background-color: #792e3b;
+}
+.d_row_0 .d_col_3 {
+	background-color: #222342;
+}
+.d_row_1 .d_col_0 {
+	background-color: #d96841;
+}
+.d_row_1 .d_col_1 {
+	background-color: #c92e3f;
+}
+.d_row_1 .d_col_2 {
+	background-color: #6d6c4c;
+}
+.d_row_1 .d_col_3 {
+	background-color: #7d929a;
+}
+.d_row_2 .d_col_0 {
+	background-color: #792e3b;
+}
+.d_row_2 .d_col_1 {
+	background-color: #222342;
+}
+.d_row_2 .d_col_2 {
+	background-color: #d96841;
+}
+.d_row_2 .d_col_3 {
+	background-color: #c92e3f;
 }
 
 
