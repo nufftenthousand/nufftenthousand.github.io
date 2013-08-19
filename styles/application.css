@@ -52,6 +52,7 @@ p {
 	font-family: "Rockwell Bold";
 	font-size: 8em;
 	color: #332208;
+	outline: 1px 1px #f5dfa9;
 }
 .nav a {
 	font-size: 2.2em;
@@ -92,7 +93,7 @@ hr {
 	margin-bottom: 3px;
 }
 p {
-	margin: .3em .5em;
+	margin: .5em .5em;
 }
 .nav {
 	display: inline-block;
