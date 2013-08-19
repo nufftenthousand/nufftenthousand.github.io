@@ -44,18 +44,17 @@ a {
 	color: #f5dfa9;
 }
 p {
-	font-size: 2.5em;
+	font-size: 2.2em;
 	line-height: 1.15em;
 	color: #332208;
 }
 #header h1 a {
 	font-family: "Rockwell Bold";
-	font-size: 9em;
+	font-size: 8em;
 	color: #332208;
-	text-shadow: 1px 1px #f5dfa9;
 }
 .nav a {
-	font-size: 2.5em;
+	font-size: 2.2em;
 }
 #content a {
 	color: #332208;
