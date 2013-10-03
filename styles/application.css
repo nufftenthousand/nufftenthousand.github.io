@@ -120,6 +120,12 @@ p {
 	display: block;
 	padding: 0.5em;
 }
+#myface {
+	float: right;
+	display: inline;
+	width: 200px;
+	margin: 0 0 0.5em 0.5em;
+}
 #footer {
 	margin-top: .5em;
 	margin-bottom: 2em;
@@ -152,6 +158,9 @@ p {
 	.nav a {
 		font-size: 1.8em;
 	}
+	#myface {
+		width: 180px;
+	}
 }
 
 @media screen and (max-width: 549px) {
@@ -179,5 +188,8 @@ p {
 	}
 	#footer {
 		font-size: 0.8em;
+	}
+	#myface {
+		width: 150px;
 	}
 }
