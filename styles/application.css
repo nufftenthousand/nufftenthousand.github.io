@@ -57,6 +57,10 @@ p {
 .nav a {
 	font-size: 2.2em;
 }
+.portalfolio a {
+	font-size: 2.2em;
+	font-family: "Cardo";
+}
 #content a {
 	color: #332208;
 }
@@ -137,6 +141,9 @@ p {
 }
 #footer .nav a {
 	margin: 1em .2em 1em .5em;
+}
+.portalfolio {
+	margin: .5em 1em;
 }
 
 

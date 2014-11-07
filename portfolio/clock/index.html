@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Clock</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+		<link type="text/css" href="css/jquery-ui-1.8.12.custom.css" rel="stylesheet" />
+		<link type="text/css" href="css/styles.css" rel="stylesheet" />
+		
+		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-blink.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+    
+    <script type="text/javascript">
+    
+        $(document).ready(function()
+        {
+            $('#colon').blink(); // default is 500ms blink interval.
+            
+            $("#mon").addClass("daySelect");
+            $("#tues").addClass("daySelect");
+            $("#wed").addClass("daySelect");
+            $("#thurs").addClass("daySelect");
+            $("#fri").addClass("daySelect");
+            $("#sat").addClass("daySelect");
+            $("#sun").addClass("daySelect");
+            
+            $("#slideIn").hide();
+            $("#snooze").hide();
+            
+            $("#vibe").addClass("alarmOptSelect");
+            
+        });
+    
+    </script>
+    
+  </head>
+
+  <body>
+    <div id="chassis">
+      <div id="screen">
+        
+      
+      
+        <!-- Time Display -->
+        <div id="timeDisp">
+          <p><span id='hr10'>1</span><span id='hr1'>2</span><span id='colon'>:</span><span id='min10'>4</span><span id='min1'>8</span><span id="tod">pm</span></p>
+        </div>
+        
+        
+        
+        <!-- Date Display -->
+        <div id="dateDisp">
+          <p><span id='dow'>Fri</span> <span id='month'>April</span> <span id='day'>29</span> <span id='year'>2011</span></p>
+        </div>
+        
+        
+        
+        <!-- Next Alarm -->
+        <div id="nextAlarm">
+          <p>Next Alarm: <span>6:00am</span></p>
+        </div>
+        
+        
+        
+        <!-- Home Screen Options -->
+        <div id="homeOpts">
+          <ul class="passive">
+            <li id="alarmsButton"><a href="#">Alarms</a></li>
+            <li id="setTimeButton"><a href="#">Set Time</a></li>
+            <li id="setDateButton"><a href="#">Set Date</a></li>
+          </ul>
+        </div>
+        
+        
+        
+        <!-- Alarm Options Side Pannel -->
+        <div id="alarmOpts">
+        
+          <div id="sideTab">
+          
+            <div id="upperEdge">
+              <div id="upperCover"></div>
+            </div>
+            
+            <div id="sideTabMain">
+              <div id="slideOut" class="sliderArrow"></div>
+              <div id="slideIn" class="sliderArrow"></div>
+              <p>Alarm Options</p>
+            </div>
+            
+            <div id="lowerEdge">
+              <div id="lowerCover"></div>
+            </div>
+            
+          </div>
+          
+          <div id="sidePannel">
+            <ul>
+              <li id="vibe"></li>
+              <li id="audio"></li>
+              <li id="coffee"></li>
+            </ul>
+          </div>
+        </div>
+        
+        
+        
+        <!-- Alarms List -->
+        <div id="alarms" class="pannel">
+          <div id="alarmsTab">
+            <p>Alarms</p>
+            <a href="#" id="alarmsClose" class="close"></a>
+          </div>
+          <div id="alarmsPannel">
+            <p>on?</p>
+            <ul id="alarmsList">
+              <li>6:00am (T F)
+              <input type="checkbox" CHECKED />
+              <a href='#' class="edit">edit</a>
+              </li>
+              <li>8:00am (M R)
+              <input type="checkbox" CHECKED />
+              <a href='#' class="edit">edit</a>
+              </li>
+              <li>10:00am (W Sat)
+              <input type="checkbox" CHECKED />
+              <a href='#' class="edit">edit</a>
+            </ul>
+            <div id='alarmListNew' class='new'><a href='#'>new</a></div>
+            <div id='alarmListDone' class='done'><a href='#'>Done</a></div>
+            <div id='more'><a href='#'>More &gt;</a></div>
+          </div>
+        </div>
+        
+        
+        
+        <!-- Set Time -->
+        <div id="setTime" class="pannel">
+          <div id="setTimeTab">
+            <p>Set Time</p>
+            <a href="#" id="setTimeClose" class="close"></a>
+          </div>
+          <div id="setTimePannel">
+            <ul class="timeUp">
+              <li><a href="#" class="hrUp"></a></li>
+              <li><a href="#" class="min10Up"></a></li>
+              <li><a href="#" class="min1Up"></a></li>
+              <li><a href="#" class="todUp"></a></li>
+            </ul>
+            <div id="setTimeDisp">
+              <p><span id='setHr10'>1</span><span id='setHr1'>2</span><span id='setTimecolon'>:</span><span id='setMin10'>4</span><span id='setMin1'>8</span><span id="setTimetod">pm</span></p>
+            </div>
+            <ul class="timeDown">
+              <li><a href="#" class="hrDown"></a></li>
+              <li><a href="#" class="min10Down"></a></li>
+              <li><a href="#" class="min1Down"></a></li>
+            </ul>
+            <div id='timeDone' class='done'><a href='#'>Done</a></div>
+          </div>
+        </div>
+        
+        
+        
+        <!-- Set Date -->
+        <div id="setDate" class="pannel">
+          <div id="setDateTab">
+            <p>Date</p>
+            <a href="#" id="setDateClose" class="close"></a>
+          </div>
+          <div id="setDatePannel">
+              <ul class="timeUp">
+                <li><a href="#" class="monUp"></a></li>
+                <li><a href="#" class="dayUp"></a></li>
+                <li><a href="#" class="yearUp"></a></li>
+              </ul>
+            <div id="setDateDisp">
+              <p><span id='setMonth'>April</span> <span id='setDay10'>2</span><span id='setDay1'>0</span> <span id='setYear'>2011</span></p>
+            </div>
+              <ul class="timeDown">
+                <li><a href="#" class="monDown"></a></li>
+                <li><a href="#" class="dayDown"></a></li>
+                <li><a href="#" class="yearDown"></a></li>
+              </ul>
+            <div id='dateDone' class='done'><a href='#'>Done</a></div>
+          </div>
+        </div>
+        
+        
+        
+        <!-- Edit Alarm -->
+        <div id="editAlarm" class="pannel">
+        
+          <div id="editAlarmTab">
+            <p>Edit Alarm</p>
+            <a href="#" id="editAlarmClose" class="close"></a>
+          </div>
+          
+          <div id="editContainer">
+          
+            <div id="editAlarmPannel">
+              <ul class="timeUp">
+                <li><a href="#" class="hrUp"></a></li>
+                <li><a href="#" class="min10Up"></a></li>
+                <li><a href="#" class="min1Up"></a></li>
+                <li><a href="#" class="todUp"></a></li>
+              </ul>
+              <div id="editAlarmDisp">
+                <p><span id='alarmHr10'>1</span><span id='alarmHr1'>2</span><span id='alarmcolon'>:</span><span id='alarmMin10'>0</span><span id='alarmMin1'>0</span><span id="alarmtod">am</span></p>
+              </div>
+              <ul class="timeDown">
+                <li><a href="#" class="hrDown"></a></li>
+                <li><a href="#" class="min10Down"></a></li>
+                <li><a href="#" class="min1Down"></a></li>
+              </ul>
+              <div id='editNext' class='done'><a href='#'>Next</a></div>
+            </div>
+            
+            <div id="editDaysPannel">
+              <p id="touchDir">Touch to select/deselect</p>
+              <div id="editDaysDisp">
+              
+                <ol id="days">
+                  <li><a href="#" id="mon">Mon</a></li>
+                  <li><a href="#" id="tues">Tues</a></li>
+                  <li><a href="#" id="wed">Wed</a></li>
+                  <li><a href="#" id="thurs">Thur</a></li>
+                  <li><a href="#" id="fri">Fri</a></li>
+                  <li><a href="#" id="sat">Sat</a></li>
+                  <li><a href="#" id="sun">Sun</a></li>
+                </ol>
+
+              </div>
+              <p id="countdown">Alarm is set for 1 day, 6 hours, 42 minutes from now.</p>
+              <div id='editBack' class='back'><a href='#'>Back</a></div>
+              <div id='editDone' class='done'><a href='#'>Done</a></div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div id="snooze">
+          <div id="slider-range"></div>
+          <p>Slide apart to turn alarm off</p>
+        </div>
+        
+      </div>
+    </div>
+    
+    <button id='activate'>alarm</button>
+    
+      
+      
+    <script type="text/javascript">
+      
+      $('#sideTabMain').click(function() {
+        var $lefty = $('#alarmOpts');
+        $lefty.animate({
+          left: parseInt($lefty.css('left'),10) == 750 ?
+            600 :
+            750
+        });
+        $('#slideOut').toggle();
+        $('#slideIn').toggle();
+      });
+      
+      $('#alarmsButton').click(function() {
+          $('#homeOpts').hide(400);
+          $('#alarmOpts').hide('slow');
+          var $goUp = $('#alarms');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#alarmListDone').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#alarms');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#alarmsClose').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#alarms');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#alarmListNew').click(function() {
+          var $goUp = $('#alarms');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+          var $goUp = $('#editAlarm');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+          $('#editAlarmTab p').html("New Alarm");
+      });
+      $('.edit').click(function() {
+          var $goUp = $('#alarms');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+          var $goUp = $('#editAlarm');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+          $('#editAlarmTab p').html("Edit Alarm");
+      });
+      $('#editDone').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#editAlarm');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+          var $lefty = $('#editContainer');
+          $lefty.animate({
+            left: parseInt($lefty.css('left'),10) == 0 ?
+              -800 :
+              0
+          });
+          $('#editAlarmTab p').html("Edit Alarm");
+      });
+      $('#editAlarmClose').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#editAlarm');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+          var $lefty = $('#editContainer');
+          $lefty.animate({
+            left: parseInt($lefty.css('left'),10) == -800 ?
+              0 :
+              0
+          });
+          $('#editAlarmTab p').html("Edit Alarm");
+      });
+      $('#editNext').click(function() {
+        var $lefty = $('#editContainer');
+        $lefty.animate({
+          left: parseInt($lefty.css('left'),10) == 0 ?
+            -800 :
+            0
+        });
+        $('#editAlarmTab p').html("Edit Days");
+      });
+      $('#editBack').click(function() {
+        var $lefty = $('#editContainer');
+        $lefty.animate({
+          left: parseInt($lefty.css('left'),10) == 0 ?
+            -800 :
+            0
+        });
+        $('#editAlarmTab p').html("Edit Alarm");
+      });
+      
+      
+      $('#setTimeButton').click(function() {
+          $('#homeOpts').hide(400);
+          $('#alarmOpts').hide('slow');
+          var $goUp = $('#setTime');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#timeDone').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#setTime');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#setTimeClose').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#setTime');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      
+      $('#setDateButton').click(function() {
+          $('#homeOpts').hide(400);
+          $('#alarmOpts').hide('slow');
+          var $goUp = $('#setDate');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#dateDone').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#setDate');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      $('#setDateClose').click(function() {
+          $('#homeOpts').show(400);
+          $('#alarmOpts').show('slow');
+          var $goUp = $('#setDate');
+          $goUp.animate({
+            top: parseInt($goUp.css('top'),10) == 500 ?
+              240 :
+              500
+          });
+      });
+      
+      
+      
+      $('#vibe').click(function() {
+        $(this).toggleClass("alarmOptSelect");
+      });
+      $('#audio').click(function() {
+        $(this).toggleClass("alarmOptSelect");
+      });
+      $('#coffee').click(function() {
+        $(this).toggleClass("alarmOptSelect");
+      });
+             
+      
+      $('#mon').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      $('#tues').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      $('#wed').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      $('#thurs').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      $('#fri').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      $('#sat').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      $('#sun').click(function() {
+          if ( $(this).hasClass("daySelect") ) {
+            $(this).removeClass("daySelect");
+            $(this).addClass("dayDeselect");
+          }
+          else if ( $(this).hasClass("dayDeselect") ) {
+            $(this).removeClass("dayDeselect");
+            $(this).addClass("daySelect");
+          }
+      });
+      
+      
+      $('#activate').click(function() {
+          $('#snooze').toggle('fast');
+          $('#alarmOpts').toggle('fast');
+          $('#nextAlarm').toggle('fast');
+          $('#homeOpts').toggle('fast');
+      });
+          
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 230, 260 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+          " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+      });
+      
+      $("#slider-range").bind('slide', function(event, ui) {
+          if ( ui.values[0] == 0 && ui.values[1] == 500 ) {
+            $('#snooze').hide('fast');
+            $('#alarmOpts').show('fast');
+            $('#nextAlarm').show('fast');
+            $('#homeOpts').show('fast');
+          }
+      });
+      
+      
+    </script>
+    
+  </body>
+</html>
