@@ -168,6 +168,9 @@ p {
 	#myface {
 		width: 180px;
 	}
+	.portalfolio a {
+		font-size: 1.8em;
+	}
 }
 
 @media screen and (max-width: 549px) {
@@ -198,5 +201,8 @@ p {
 	}
 	#myface {
 		width: 150px;
+	}
+	.portalfolio a {
+		font-size: 1.2em;
 	}
 }
