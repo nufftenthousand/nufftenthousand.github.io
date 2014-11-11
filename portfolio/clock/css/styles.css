@@ -1,16 +1,17 @@
 @font-face { /* for IE */
   font-family: 'bloodwax';
-  src: url('bloodwax/BLOODWAI.ttf');
+  src: url('bloodwax/BLOODWAI.TTF');
 }
-@font-face { /* for IE */
+@font-face { 
   font-family: 'bloodwax';
-  src: url(http://:/) format("No-IE-404"), url('bloodwax/BLOODWAI.ttf') format("truetype");
+  src: url(http://:/) format("No-IE-404"), url('bloodwax/BLOODWAI.TTF') format("truetype");
 }
 body {
   font-family: 'bloodwax';
   color: #2779AA;
 }
-#chassis { margin: 0 auto;
+#chassis { 
+  margin: 0 auto;
   position: relative;
   width: 933px;
   height: 583px;
