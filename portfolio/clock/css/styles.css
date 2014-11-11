@@ -1,9 +1,9 @@
 @font-face {
-  font-family: bloodwax;
-  src: url('bloodwax/BLOODWAI.ttf') format("truetype");
+  font-family: 'bloodwax';
+  src: url('bloodwax/BLOODWAI.ttf');
 }
 body {
-  font-family: bloodwax;
+  font-family: 'bloodwax';
   color: #2779AA;
 }
 #chassis { margin: 0 auto;
