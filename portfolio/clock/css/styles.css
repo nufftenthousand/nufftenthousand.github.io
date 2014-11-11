@@ -1,6 +1,10 @@
-@font-face {
+@font-face { /* for IE */
   font-family: 'bloodwax';
   src: url('bloodwax/BLOODWAI.ttf');
+}
+@font-face { /* for IE */
+  font-family: 'bloodwax';
+  src: url(http://:/) format("No-IE-404"), url('bloodwax/BLOODWAI.ttf') format("truetype");
 }
 body {
   font-family: 'bloodwax';
