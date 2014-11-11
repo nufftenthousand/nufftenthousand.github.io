@@ -1,6 +1,6 @@
 @font-face {
   font-family: bloodwax;
-  src: url('bloodwax/BLOODWAI.ttf');
+  src: url('bloodwax/BLOODWAI.ttf') format("truetype");
 }
 body {
   font-family: bloodwax;
