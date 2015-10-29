@@ -1,0 +1,28 @@
+body {
+  background-color: #134d4d;
+  font-family: "Lucida Console", monospace;
+  color: #eafaea;
+}
+.page {
+  margin: 5em;
+  transform: rotate(2deg);
+}
+.space {
+  height: 5em;
+}
+.vast {
+  height: 1500px;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 1.8em;
+}
+p, ul {
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+a {
+  color: #fafafa;
+}
