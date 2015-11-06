@@ -4,14 +4,22 @@ body {
   color: #eafaea;
 }
 .page {
-  margin: 5em;
+  margin: 5em auto;
+  width: 90%;
+  max-width: 500px;
   transform: rotate(2deg);
 }
 .space {
   height: 5em;
 }
+.spacer {
+  height: 8em;
+}
 .vast {
   height: 1500px;
+}
+.inner {
+  margin: 2em;
 }
 h1 {
   font-size: 3em;
@@ -22,6 +30,8 @@ h2 {
 p, ul {
   font-size: 1.2em;
   margin-left: 1em;
+}
+li {
 }
 a {
   color: #fafafa;
