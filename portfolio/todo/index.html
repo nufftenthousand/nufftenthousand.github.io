@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Do Things</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="display">
+
+      <div id="header" class="section">
+
+        <div id="frame-nav">
+          <a id="linkto-list" class="view-link touchme left blu-f" href="#">list</a>
+          <a id="linkto-menu" class="view-link touchme center yel" href="#">&#9776;</a>
+          <a id="linkto-visual" class="view-link touchme right red" href="#">visual</a>
+        </div>
+
+        <div id="input-holder">
+          <textarea id="new-item" class="text-input main-input expanding" placeholder="this will expand as you type"></textarea>
+        </div>
+
+        <div id="message-holder" class="text message">
+          <img class="x-out icon right" src="img/x.png">
+          <p>This is a message you can dismiss.</p>
+        </div>
+      </div><!-- end header -->
+
+      <div id="body" class="section">
+
+        <div id="list">
+          <ul>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done really badly otherwise you'll never be happy</input></label></li>
+            <li><label><input type="checkbox">Go to the payphone at <a href="#" class="query-link">4th &amp; Elm</a>. You will find an envelope taped underneath the housing. Inside this envelope will be a note consisting of ten letters. Decode this string using your Little Orphan Annie Decoder Ring and call the phone number revealed. When Symone answers, tell her you're responding to Al's Craigslist ad, and you're interested in tickling his cattle&mdash;the entire herd&mdash;for thereputic purposes, as the ad indicated. "Al" will give you futher instructions.</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">something that has to be done</input></label></li>
+            <li><label><input type="checkbox">4</input></label></li>
+            <li><label><input type="checkbox">3</input></label></li>
+            <li><label><input type="checkbox">2</input></label></li>
+            <li><label><input type="checkbox">THE LAST ONE</input></label></li>
+          </ul>
+        </div><!-- end list -->
+      </div><!-- end body -->
+
+      <div id="footer" class="section center-just inline-parent inverted">
+        <a class="status-link inline inverted active" href="#">All</a>
+        <a class="status-link inline inverted" href="#">Active</a>
+        <a class="status-link inline inverted" href="#">Expecting</a>
+        <a class="status-link inline inverted" href="#">Incubating</a>
+        <a class="status-link inline inverted" href="#">Complete</a>
+      </div><!-- end footer -->
+    </div><!-- end display -->
+
+
+
+    <!-- js -->
+    <script src="vendor/jquery-1.11.3.min.js"></script>
+    <script src="vendor/ExpandingTextareas-master/expanding.js"></script>
+    <script src="js/main.js"></script>
+    <!-- end js -->
+  </body>
+</html>
+
