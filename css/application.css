@@ -1,7 +1,7 @@
 body {
   background-color: #134d4d;
   font-family: "Lucida Console", monospace;
-  color: #eafaea;
+  color: #a3dddd;
 }
 .page {
   margin: 5em auto;
@@ -35,7 +35,7 @@ li {
   margin: 0.5em 0;
 }
 a {
-  color: #fafafa;
+  color: #dddda3;
 }
 
 .pointer {
