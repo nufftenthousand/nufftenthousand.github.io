@@ -255,10 +255,10 @@ function simKeyPress(code) {
 }
 
 var options = {};
-$('#grid').hammer(options).bind("swipeleft", simKeyPress(37));
-$('#grid').hammer(options).bind("swipeup", simKeyPress(38));
-$('#grid').hammer(options).bind("swiperight", simKeyPress(39));
-$('#grid').hammer(options).bind("swipedown", simKeyPress(40));
+$('body').hammer(options).bind("swipeleft", simKeyPress(37));
+$('body').hammer(options).bind("swipeup", simKeyPress(38));
+$('body').hammer(options).bind("swiperight", simKeyPress(39));
+$('body').hammer(options).bind("swipedown", simKeyPress(40));
 
 document.onkeydown = function(e) {
   var evt = e || window.event;
