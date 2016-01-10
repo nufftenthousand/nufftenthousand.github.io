@@ -6,6 +6,8 @@ initGame();
 function initGame() {
   initScoreboard();
   initGrid();
+  initKeyEvents();
+  initTouchEvents();
 }
 
 function initGrid() {
@@ -25,6 +27,52 @@ function initScoreboard() {
   score = 0;
   paintHighScore();
   paintScore();
+}
+
+function initTouchEvents() {
+  var options = {
+    preventDefault: true
+  };
+  swipeableElement = document.getElementById('grid');
+  var mc = new Hammer(swipeableElement, options);
+  mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  mc.on('swipeleft', function(ev) {
+    move('left');
+  });
+  mc.on('swipeup', function(ev) {
+    move('up');
+  });
+  mc.on('swiperight', function(ev) {
+    move('right');
+  });
+  mc.on('swipedown', function(ev) {
+    move('down');
+  });
+}
+
+function initKeyEvents() {
+  document.onkeydown = function(e) {
+    var evt = e || window.event;
+    if ( evt.keyCode >= 37 && evt.keyCode <= 40 ) {
+      evt.preventDefault();
+
+      switch (evt.keyCode) {
+        case 37:
+          move('left');
+        break;
+        case 38:
+          move('up');
+        break;
+        case 39:
+          move('right');
+        break;
+        case 40:
+          move('down');
+        break;
+      }
+
+    }
+  };
 }
 
 function alterCell(r, c) {
@@ -53,21 +101,6 @@ function paintCell(r,c,fresh) {
 
 function getCellID(r, c) {
   return '#cell-'+(4*r+c);
-}
-
-function stroke(dir) {
-  switch(dir) {
-    case 'u':
-      break;
-    case 'd':
-      break;
-    case 'l':
-      break;
-    case 'r':
-      break;
-    default:
-      alert('Invalid direction'); // debug
-  }
 }
 
 function getStoredHighScore() {
@@ -125,6 +158,31 @@ function siphonFromGrid(r,c,line) {
 
 function siphonToGrid(r,c,i,line) {
   grid[r][c] = line[i];
+}
+
+function move(direction) {
+  var prevGrid = duplicateGrid();
+
+  switch (direction) {
+    case 'left':
+      moveLeft();
+    break;
+    case 'up':
+      moveUp();
+    break;
+    case 'right':
+      moveRight();
+    break;
+    case 'down':
+      moveDown();
+    break;
+  }
+
+  paintGrid();
+
+  if ( tilesMoved(grid, prevGrid) ) {
+    freshTile();
+  }
 }
 
 function moveLeft() {
@@ -248,128 +306,6 @@ function endGame() {
   if ( playAgain ) {
     initGame();
   }
-}
-
-function simKeyPress(code) {
-  jQuery.event.trigger({ type: 'keypress', which: code });
-}
-
-var options = {};
-$('body').hammer(options).bind("swipeleft", simKeyPress(37));
-$('body').hammer(options).bind("swipeup", simKeyPress(38));
-$('body').hammer(options).bind("swiperight", simKeyPress(39));
-$('body').hammer(options).bind("swipedown", simKeyPress(40));
-
-document.onkeydown = function(e) {
-  var evt = e || window.event;
-  if ( evt.keyCode >= 37 && evt.keyCode <= 40 ) {
-    evt.preventDefault();
-
-    var prevGrid = duplicateGrid();
-
-    switch (evt.keyCode) {
-      case 37:
-        moveLeft();
-      break;
-      case 38:
-        moveUp();
-      break;
-      case 39:
-        moveRight();
-      break;
-      case 40:
-        moveDown();
-      break;
-    }
-
-    paintGrid();
-    if ( tilesMoved(grid, prevGrid) ) {
-      freshTile();
-    }
-
-    // $('#test').empty();
-    // echo('grid:');
-    // testPrintGrid(grid);
-    // br();
-    // echo('prevGrid:');
-    // testPrintGrid(prevGrid);
-
-  }
-};
-
-// testPainting();
-
-function testPainting() {
-  grid[0][0] = 16;
-  grid[0][1] = 32;
-  grid[0][2] = 64;
-  grid[0][3] = 128;
-  grid[1][0] = 256;
-  grid[1][1] = 512;
-  grid[1][2] = 1024;
-  grid[1][3] = 2048;
-  paintGrid();
-  grid[0][0] = 16;
-  grid[0][1] = 16;
-  grid[0][2] = 16;
-  grid[0][3] = 16;
-  grid[1][0] = 256;
-  grid[1][1] = 512;
-  grid[1][2] = 512;
-  grid[1][3] = 512;
-  paintGrid();
-  grid[0][0] = 16;
-  grid[0][1] = 16;
-  grid[0][2] = 16;
-  grid[0][3] = 128;
-  grid[1][0] = 512;
-  grid[1][1] = 512;
-  grid[1][2] = 512;
-  grid[1][3] = 128;
-  grid[2][0] = 16;
-  grid[2][1] = null;
-  grid[2][2] = null;
-  grid[2][3] = 16;
-  grid[3][0] = null;
-  grid[3][1] = null;
-  grid[3][2] = null;
-  grid[3][3] = 512;
-  paintGrid();
-}
-
-function testPrintGrid(x) {
-  for ( var i = 0; i < x.length; i++ ) {
-    var row = '';
-    for ( var j = 0; j < x[i].length; j++) {
-      row = row + x[i][j] + ' ';
-    }
-    echo(row);
-  }
-}
-
-function testArrFunc() {
-  var arr = ['a','b','c','d','d','f'];
-  function printTestArr() {
-    for (var i = 0; i < arr.length; i++) {
-      $('#test').append(arr[i]+' ');
-    }
-    $('#test').append('<br>');
-  }
-  $('#test').append('<br>');
-  $('#test').append('<br>');
-  printTestArr();
-  arr.splice(3,1);
-  printTestArr();
-
-  $('#test').append('<br>');
-}
-
-function br() {
-  $('#test').append('<br>');
-}
-
-function echo(str) {
-  $('#test').append(str+'<br>');
 }
 
 });
