@@ -3,12 +3,30 @@
 }
 body {
   background-color: #121519;
+  font-family: "Arial", sans-serif;
+}
+p {
+  margin: 0;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.scoreboard {
+  color: #eee;
+  font-size: 1.5em;
+  width: 547px;
+  margin: 10px auto;
+  overflow: auto;
 }
 #grid {
   border: 7px solid #577;
   background-color: #577;
   border-radius: 5px;
   margin: 0 auto;
+  font-size: 2em;
 }
 .cell {
   border: 3px solid #577;
@@ -17,7 +35,6 @@ body {
   height: 128px;
   text-align: center;
   vertical-align: middle;
-  font: 2em "Helvetica Neue";
 }
 .fresh {
   /*border: 3px solid #FF2;*/

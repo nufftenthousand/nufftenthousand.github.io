@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
 <title>256</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
+  <div class="scoreboard">
+    <p class="right">High Score: <span id="highScore"></span></p>
+    <p class="left">Score: <span id="score"></span></p>
+  </div>
   <table id="grid">
     <tr class="row" id="row-0">
       <td class="cell" id="cell-0"></td>
@@ -36,5 +41,6 @@
   <div id="test"></div>
 
 <script src="jquery.1.8.2.min.js" type="text/javascript"></script>
+<script src="js.cookie.js"></script>
 <script src="main.js" type="text/javascript"></script>
 </body>

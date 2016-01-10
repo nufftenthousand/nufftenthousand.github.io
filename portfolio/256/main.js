@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+var highScoreCookieName = "nate256highscore";
+initGame();
+
+function initGame() {
+  initScoreboard();
+  initGrid();
+}
+
 function initGrid() {
   grid = new Array(4);
   for ( var r=0; r<4; r++ ) {
@@ -8,7 +16,15 @@ function initGrid() {
       grid[r][c] = null;
     }
   }
+  paintGrid();
   freshTile();
+}
+
+function initScoreboard() {
+  highScore = getStoredHighScore();
+  score = 0;
+  paintHighScore();
+  paintScore();
 }
 
 function alterCell(r, c) {
@@ -54,11 +70,43 @@ function stroke(dir) {
   }
 }
 
+function getStoredHighScore() {
+  var value = Cookies.get(highScoreCookieName);
+  if ( value === undefined ) {      // haven't played yet
+    Cookies.set(highScoreCookieName, 0); // have a cookie
+    return 0;
+  }
+  return parseInt(value, 10);
+}
+
+function newHighScore(newScore) {
+  if ( newScore > highScore ) {
+    Cookies.set(highScoreCookieName, newScore);
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function paintHighScore() {
+  $('#highScore').html( highScore );
+}
+
+function paintScore() {
+  $('#score').html(score);
+}
+
+function addToScore(incrementBy) {
+  score = score + incrementBy;
+  paintScore();
+}
+
 function consolodateLine(line) {
   var pre = 0;
   for ( var i=0; i<line.length; i++ ) {
-    if (line[i] == pre) {
-      line[i] = line[i]*2;
+    if (line[i] == pre) {   // adjacent cells are equal
+      line[i] = line[i]*2;  // combine
+      addToScore(line[i]);
       pre = 0;
       line.splice(i-1,1);
       i--;
@@ -173,7 +221,7 @@ function tilesMoved(a, b) {
       if ( a[i][j] != b[i][j] ) movement = true;
     }
   }
-  if ( gridIsFull ) alert('Game Over. High Score. (Score not available at this time).')
+  if ( gridIsFull ) endGame();
   return movement;
 }
 
@@ -188,26 +236,41 @@ function duplicateGrid() {
   return copy;
 }
 
-document.onkeydown = function() {
-  if ( window.event.keyCode >= 37 && window.event.keyCode <= 40 ) {
-      event.preventDefault();
+function endGame() {
+  var message = "Not bad, but my dog got " + score*2 + " by walking on my keyboard. Play again?";
+  if ( newHighScore(score) ) {   // updates if higher than before
+    message = "New high score: " + score + "\n" + message;
+  } else {
+    message = "Your score: " + score + "\n" + message;
+  }
+
+  var playAgain = confirm( message );
+  if ( playAgain ) {
+    initGame();
+  }
+}
+
+document.onkeydown = function(e) {
+  var evt = e || window.event;
+  if ( evt.keyCode >= 37 && evt.keyCode <= 40 ) {
+    evt.preventDefault();
 
     var prevGrid = duplicateGrid();
 
-      switch (window.event.keyCode) {
-          case 37:
-              moveLeft();
-              break;
-          case 38:
-              moveUp();
-              break;
-          case 39:
-              moveRight();
-              break;
-          case 40:
-              moveDown();
-              break;
-      }
+    switch (evt.keyCode) {
+      case 37:
+        moveLeft();
+      break;
+      case 38:
+        moveUp();
+      break;
+      case 39:
+        moveRight();
+      break;
+      case 40:
+        moveDown();
+      break;
+    }
 
     paintGrid();
 
@@ -218,13 +281,12 @@ document.onkeydown = function() {
     // echo('prevGrid:');
     // testPrintGrid(prevGrid);
 
-      if ( tilesMoved(grid, prevGrid) ) {
-        freshTile();
+    if ( tilesMoved(grid, prevGrid) ) {
+      freshTile();
     }
   }
 };
 
-initGrid();
 // testPainting();
 
 function testPainting() {
