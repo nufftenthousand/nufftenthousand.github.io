@@ -250,6 +250,16 @@ function endGame() {
   }
 }
 
+function simKeyPress(code) {
+  jQuery.event.trigger({ type: 'keypress', which: code });
+}
+
+var options = {};
+$('#grid').hammer(options).bind("swipeleft", simKeyPress(37));
+$('#grid').hammer(options).bind("swipeup", simKeyPress(38));
+$('#grid').hammer(options).bind("swiperight", simKeyPress(39));
+$('#grid').hammer(options).bind("swipedown", simKeyPress(40));
+
 document.onkeydown = function(e) {
   var evt = e || window.event;
   if ( evt.keyCode >= 37 && evt.keyCode <= 40 ) {
@@ -273,6 +283,9 @@ document.onkeydown = function(e) {
     }
 
     paintGrid();
+    if ( tilesMoved(grid, prevGrid) ) {
+      freshTile();
+    }
 
     // $('#test').empty();
     // echo('grid:');
@@ -281,9 +294,6 @@ document.onkeydown = function(e) {
     // echo('prevGrid:');
     // testPrintGrid(prevGrid);
 
-    if ( tilesMoved(grid, prevGrid) ) {
-      freshTile();
-    }
   }
 };
 
