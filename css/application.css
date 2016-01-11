@@ -131,3 +131,23 @@ footer {
   }
 }
 
+
+
+@media print {
+  h4 {
+    margin-top: 0;
+  }
+  .item {
+    padding: 12px 0;
+    float: none;
+    width: auto;
+    clear: both;
+    margin-bottom: 36px;
+  }
+  .frame {
+    float: left;
+    width: 25%;
+    margin: 0 24px 24px 0;
+  }
+}
+
