@@ -1,50 +1,127 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: #134d4d;
-  font-family: "Lucida Console", monospace;
-  color: #a3dddd;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.47em;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-.page {
-  margin: 5em auto;
+.page-wrap {
+  margin: 0 auto;
   width: 90%;
-  max-width: 500px;
-  transform: rotate(2deg);
-}
-.space {
-  height: 5em;
-}
-.spacer {
-  height: 8em;
-}
-.vast {
-  height: 1500px;
-}
-.inner {
-  margin: 2em;
+  max-width: 800px;
 }
 h1 {
-  font-size: 3em;
+  font-size: 3.2em;
+  margin: 48px 0 24px;
+  font-weight: 100;
+  color: #336d6d;
 }
 h2 {
-  font-size: 1.8em;
+  font-size: 1.5em;
+  margin: 12px 0;
 }
-p, ul {
+h3 {
   font-size: 1.2em;
-  margin: 0.5em 0 0.5em 1em;
+  margin: 12px 0 24px;
+  font-family: "Roboto Slab", "Georgia", serif;
 }
-li {
-  margin: 0.5em 0;
+h4 {
+  font-size: 1em;
+  margin: 24px 0 6px;
+  font-family: "Roboto Slab", "Georgia", serif;
+  font-weight: 300;
+}
+hr {
+  border: none;
+  border-top: 1px solid #e2e2e2;
+  margin: 36px 0;
 }
 a {
-  color: #dddda3;
+  color: #336d6d;
+}
+p {
+  margin: 12px 0;
+}
+ul {
+  margin: 12px 0;
+}
+ul.horizontal {
+  overflow: auto;
+  zoom: 1;
+}
+ul.horizontal li {
+  float: left;
+  margin: 0 24px 0 0;
+}
+ul.horizontal li:last-child {
+  margin: 0;
+}
+footer {
+  margin: 36px 0 0 0;
+  padding: 0 36px;
+  background-color: #e2e2e2;
+  border-top: #999;
+  color: #444;
 }
 
-.pointer {
-  padding: 0.5em 0 0 1.5em;
-  margin-left: 2em;
-  background-image: url('../img/pointer.png');
-  background-repeat: no-repeat;
-  background-size: 1em;
-  background-position: top left;
+
+
+.item {
+  width: 100%;
+  padding: 12px 36px 48px;
+}
+.frame {
+  display: block;
+  line-height: 0;
+  border: 1px solid #e2e2e2;
+  background-color: #fafafa;
+}
+.thumb {
+  width: 100%;
+  padding: 6px;
+}
+.caption {
+  margin: 6px 0;
 }
 
+
+
+.light {
+  color: #999;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clearfix {
+  clear: both;
+  overflow: auto;
+  zoom: 1;
+}
+
+
+
+@media screen and (min-width: 35.5em) {
+  .contact {
+    float: right;
+  }
+  .item {
+    width: 50%;
+    float: left;
+    padding: 12px 48px 48px;
+  }
+}
+
+
+
+@media screen and (min-width: 64em) {
+  .item {
+    width: 33.33%;
+    padding: 12px 36px 48px;
+  }
+}
 
