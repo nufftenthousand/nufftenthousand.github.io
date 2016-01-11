@@ -12,6 +12,12 @@ body {
   width: 90%;
   max-width: 800px;
 }
+.subheading {
+  padding: 24px 0;
+  margin: 36px 0;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
 h1 {
   font-size: 3.2em;
   margin: 48px 0 24px;
