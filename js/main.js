@@ -7,6 +7,7 @@ jQuery.fn.extend({
 });
 
 function resetForm() {
+  $('#formspree .expanding').val('').change();
   $('#formspree .text-input').val('');
   enableForm();
 }
@@ -69,6 +70,11 @@ $(document).ready( function() {
 
   $('#formspree').submit(function(e) {
     e.preventDefault();
+
+    if ( !$('input[name=_subject]').val().trim() ) {
+      $('input[name=_subject]').val('no subject');
+    }
+
     $.ajax({
       url: '//formspree.io/nate.duffy@gmail.com',
       method: 'POST',
