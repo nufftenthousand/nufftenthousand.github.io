@@ -132,6 +132,7 @@ label a {
   margin-left: 12px;
 }
 input, textarea {
+  -webkit-appearance: none;
   display: block;
   margin-bottom: 24px;
   font-size: 1.2em;
@@ -152,6 +153,7 @@ label {
   outline: none;
   border: none;
   border-bottom: 1px solid #e2e2e2;
+  border-radius: 0;
   padding: 6px 0;
   box-shadow: 0 0 0 1000px white inset;
 }
