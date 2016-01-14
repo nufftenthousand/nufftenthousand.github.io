@@ -107,11 +107,14 @@
         <label for="name">Name</label>
         <input class="text-input" type="text" name="name">
         <label for="_replyto">Your Email</label>
-        <input class="text-input" type="email" name="_replyto">
+        <input class="text-input" type="email" name="_replyto" required>
         <label for="_subject">Subject</label>
         <input class="text-input" type="text" name="_subject">
         <label for="message">Message</label>
         <textarea name="message" class="text-input expanding"></textarea>
+        <div id="form-invalid" class="form-message">
+          <p>Please supply a valid email address. Otherwise, I can't respond to you.</p>
+        </div>
         <input id="form-submit" type="submit" value="Send">
         <div id="form-success" class="form-message">
           <p>Thanks for contacting me! I'll get back to you as soon as I can.</p>
@@ -120,6 +123,7 @@
         <div id="form-error" class="form-message">
           <p>There was an error submitting the form.</p>
           <p>Try sending an email to <a href="mailto:nate.duffy@gmail.com" target="_blank">nate.duffy@gmail.com</a> using your email client.</p>
+          <p><a href="javascript:void(0); // reset form" class="reset-form">Send another message</a></p>
         </div>
       </form>
     </div>
