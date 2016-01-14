@@ -84,8 +84,13 @@ input, textarea {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 input:disabled, textarea:disabled {
-  color: #999;
+  color: #999 !important;
 }
+/* i hate autofill
+input:-webkit-autofill {
+  color: #999 !important;
+}
+*/
 label {
   margin-top: 24px;
   font-family: "Roboto Slab", "Georgia", serif;
@@ -97,6 +102,7 @@ label {
   border: none;
   border-bottom: 1px solid #e2e2e2;
   padding: 6px 0;
+  box-shadow: 0 0 0 1000px white inset;
 }
 .text-input:focus {
   border-bottom: 1px solid #73adad;
