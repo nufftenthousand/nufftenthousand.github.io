@@ -1,3 +1,35 @@
+jQuery.fn.extend({
+  labelFor: function () {
+    var focusedName = $(this).attr('name');
+    var label = 'label[for=' + focusedName + ']';
+    return this.pushStack( $(label) );
+  }
+});
+
+function resetForm() {
+  $('#formspree .form-message').hide();
+  $('#formspree .text-input').val('');
+  $('#form-submit').show();
+  $('#formspree :input').each( function() {
+    $(this).prop('disabled', false);
+  });
+}
+
+function disableForm () {
+  $('#form-submit').hide();
+  $('#formspree :input').each( function() {
+    $(this).prop('disabled', true);
+  });
+}
+
+function showFormSuccess() {
+  $('#form-success').show();
+}
+
+function showFormError() {
+  $('#form-error').show();
+}
+
 $(document).ready( function() {
 
   $(':input').focus( function() {
@@ -7,12 +39,8 @@ $(document).ready( function() {
     $(this).labelFor().removeClass('focus');
   });
 
-  jQuery.fn.extend({
-    labelFor: function () {
-      var focusedName = $(this).attr('name');
-      var label = 'label[for=' + focusedName + ']';
-      return this.pushStack( $(label) );
-    }
+  $('.reset-form').on('click', function() {
+    resetForm();
   });
 
   $('#formspree').submit(function(e) {
@@ -23,12 +51,12 @@ $(document).ready( function() {
       data: $(this).serialize(),
       dataType: 'json',
       success: function(data) {
-        console.log('Success!');
-        console.log(data);
+        disableForm();
+        showFormSuccess();
       },
       error: function(err) {
-        console.log('Error!');
-        console.log(data);
+        disableForm();
+        showFormError();
       }
     });
   });

@@ -105,14 +105,22 @@
         method="POST">
         <input type="text" name="_gotcha" style="display:none">
         <label for="name">Name</label>
-        <input type="text" name="name">
+        <input class="text-input" type="text" name="name">
         <label for="_replyto">Your Email</label>
-        <input type="email" name="_replyto">
+        <input class="text-input" type="email" name="_replyto">
         <label for="_subject">Subject</label>
-        <input type="text" name="_subject">
+        <input class="text-input" type="text" name="_subject">
         <label for="message">Message</label>
-        <textarea name="message" class="expanding"></textarea>
-        <input type="submit" value="Send">
+        <textarea name="message" class="text-input expanding"></textarea>
+        <input id="form-submit" type="submit" value="Send">
+        <div id="form-success" class="form-message">
+          <p>Thanks for contacting me! I'll get back to you as soon as I can.</p>
+          <p><a href="javascript:void(0); // reset form" class="reset-form">Send another message</a></p>
+        </div>
+        <div id="form-error" class="form-message">
+          <p>There was an error submitting the form.</p>
+          <p>Try sending an email to <a href="mailto:nate.duffy@gmail.com" target="_blank">nate.duffy@gmail.com</a> using your email client.</p>
+        </div>
       </form>
     </div>
   </div>

@@ -67,7 +67,7 @@ ul.horizontal li:last-child {
 form {
   width: 90%;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 48px;
 }
 form a {
   color: #73adad;
@@ -83,19 +83,22 @@ input, textarea {
   color: #333;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+input:disabled, textarea:disabled {
+  color: #999;
+}
 label {
   margin-top: 24px;
   font-family: "Roboto Slab", "Georgia", serif;
   color: #999;
 }
-input[type=text], input[type=email], textarea {
+.text-input {
   width: 100%;
   outline: none;
   border: none;
   border-bottom: 1px solid #e2e2e2;
   padding: 6px 0;
 }
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
+.text-input:focus {
   border-bottom: 1px solid #73adad;
 }
 .focus {
@@ -109,7 +112,20 @@ input[type=submit] {
   border-radius: 0;
   padding: 6px 12px;
   width: 70%;
-  margin: 48px auto;
+  margin: 48px auto 0;
+}
+.form-message {
+  font-family: "Roboto Slab", "Georgia", serif;
+  padding: 0 12px;
+  width: 70%;
+  margin: 48px auto 0;
+  display: none;
+}
+#form-success {
+  border: 3px solid #73adad;
+}
+#form-error {
+  border: 3px solid #ad7373;
 }
 
 footer {
