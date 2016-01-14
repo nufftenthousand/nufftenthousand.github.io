@@ -98,6 +98,23 @@
         <p class="caption light">2015</p>
       </div>
     </div>
+    <hr>
+    <div class="clearfix" id="emailme">
+      <h3>Contact</h3>
+      <form id="formspree" action="//formspree.io/nate.duffy@gmail.com"
+        method="POST">
+        <input type="text" name="_gotcha" style="display:none">
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="_replyto">Your Email</label>
+        <input type="email" name="_replyto">
+        <label for="_subject">Subject</label>
+        <input type="text" name="_subject">
+        <label for="message">Message</label>
+        <textarea name="message" class="expanding"></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
   </div>
   <footer class="clearfix">
     <nav class="contact">
@@ -109,6 +126,12 @@
     </nav>
     <p>Nate Duffy, 2016</p>
   </footer>
+
+  <!-- begin js -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="vendor/ExpandingTextareas-master/expanding.js"></script>
+    <script src="js/main.js"></script>
+  <!-- end js -->
 </body>
 </html>
 

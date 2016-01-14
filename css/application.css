@@ -64,6 +64,54 @@ ul.horizontal li {
 ul.horizontal li:last-child {
   margin: 0;
 }
+form {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+form a {
+  color: #73adad;
+  text-decoration: none;
+}
+label a {
+  margin-left: 12px;
+}
+input, textarea {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 1.2em;
+  color: #333;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+label {
+  margin-top: 24px;
+  font-family: "Roboto Slab", "Georgia", serif;
+  color: #999;
+}
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 6px 0;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border-bottom: 1px solid #73adad;
+}
+.focus {
+  color: #73adad;
+}
+input[type=submit] {
+  font-family: "Roboto Slab", "Georgia", serif;
+  background-color: #73adad;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 6px 12px;
+  width: 70%;
+  margin: 48px auto;
+}
+
 footer {
   margin: 36px 0 0 0;
   padding: 0 36px;
