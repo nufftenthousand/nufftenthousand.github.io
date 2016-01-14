@@ -7,12 +7,12 @@ jQuery.fn.extend({
 });
 
 function resetForm() {
-  $('#formspree .form-message').hide();
   $('#formspree .text-input').val('');
   enableForm();
 }
 
 function enableForm() {
+  $('#formspree .form-message').hide();
   $('#form-submit').show();
   $('#formspree :input').each( function() {
     $(this).prop('disabled', false);
