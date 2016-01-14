@@ -47,6 +47,10 @@ hr {
 a {
   color: #336d6d;
 }
+a:focus {
+  outline: none;
+  color: #73adad;
+}
 p {
   margin: 12px 0;
 }
@@ -83,6 +87,10 @@ footer {
   line-height: 0;
   border: 1px solid #e2e2e2;
   background-color: #fafafa;
+}
+.frame:focus {
+  outline: none;
+  border: 1px solid #73adad;
 }
 .thumb {
   width: 100%;
