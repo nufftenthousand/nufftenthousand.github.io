@@ -18,24 +18,37 @@ body {
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
 }
+.headline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.headline h1 {
+  line-height: 1;
+}
+.headline li {
+  line-height: 1.47;
+}
 h1 {
   font-size: 3.2em;
-  margin: 48px 24px 24px 0;
+  margin: 36px 24px 12px 0;
   font-weight: 100;
   color: #336d6d;
-  /* TODO stop overlapping of h1 and .contact */
 }
-header h1, header nav {
-  display: inline-block;
-}
-header h1 {
-  width: 50%;
-}
-header nav {
-  width: 50%;
-}
-header nav ul {
-  margin: 0;
+h1 a {
+  text-decoration: none;
 }
 h2 {
   font-size: 1.5em;
@@ -63,9 +76,6 @@ a {
 a:focus {
   outline: none;
   color: #73adad;
-}
-h1 a {
-  text-decoration: none;
 }
 p {
   margin: 12px 0;
@@ -133,6 +143,9 @@ h4 span {
 }
 h4 .light {
 }
+
+
+
 
 
 
@@ -237,6 +250,9 @@ input[type=submit]:focus {
 .invalid {
   color: #ad7373;
 }
+
+
+
 
 
 
