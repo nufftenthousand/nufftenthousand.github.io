@@ -53,6 +53,8 @@ function emailIsValid() {
 
 $(document).ready( function() {
 
+  $('input:required').labelFor().append('<span class="form-note">(required)</span>');
+
   $(':input').focus( function() {
     $(this).labelFor().addClass('focus');
   });

@@ -160,6 +160,9 @@ label {
 .text-input:focus {
   border-bottom: 1px solid #73adad;
 }
+.form-note {
+  margin-left: 6px;
+}
 .focus {
   color: #73adad;
 }
