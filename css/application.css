@@ -222,9 +222,10 @@ input[type=submit] {
   border-radius: 0;
   padding: 6px 12px;
   width: 70%;
-  margin: 48px auto 0;
+  margin: 48px auto 6px;
+  cursor: pointer;
 }
-input[type=submit]:focus {
+input[type=submit]:focus, input[type=submit]:hover {
   outline: 1px solid #73adad;
 }
 .form-message {
