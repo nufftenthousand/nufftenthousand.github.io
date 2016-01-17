@@ -12,17 +12,24 @@ body {
   width: 90%;
   max-width: 800px;
 }
-.subheading {
+.subheader {
   padding: 24px 0;
-  margin: 36px 0;
+  margin: 12px 0 36px;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
 }
 h1 {
   font-size: 3.2em;
-  margin: 48px 0 24px;
+  margin: 48px 24px 24px 0;
   font-weight: 100;
   color: #336d6d;
+  /* TODO stop overlapping of h1 and .contact */
+}
+header h1, header nav {
+  display: inline-block;
+}
+header nav ul {
+  margin: 0;
 }
 h2 {
   font-size: 1.5em;
@@ -51,6 +58,9 @@ a:focus {
   outline: none;
   color: #73adad;
 }
+h1 a {
+  text-decoration: none;
+}
 p {
   margin: 12px 0;
 }
@@ -69,7 +79,7 @@ ul.horizontal li:last-child {
   margin: 0;
 }
 footer {
-  margin: 36px 0 0 0;
+  margin: 96px 0 0 0;
   padding: 0 36px;
   background-color: #e2e2e2;
   border-top: #999;
@@ -102,6 +112,25 @@ footer {
 
 
 
+h4.left + .horizontal {
+  margin: 25px 0 6px;
+  padding-left: 24px;
+}
+.bold {
+}
+#resume h4 {
+  color: #336d6d;
+  font-weight: 400;
+}
+h4 span {
+  white-space: nowrap;
+}
+h4 .light {
+}
+
+
+
+
 .light {
   color: #999;
 }
@@ -122,7 +151,7 @@ footer {
 form {
   width: 90%;
   max-width: 500px;
-  margin: 0 auto 48px;
+  margin: 0 auto;
 }
 form a {
   color: #73adad;
@@ -206,7 +235,7 @@ input[type=submit]:focus {
 
 
 @media screen and (min-width: 35.5em) {
-  .contact {
+  footer .contact {
     float: right;
   }
   .item {
