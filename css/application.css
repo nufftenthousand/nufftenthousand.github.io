@@ -65,6 +65,12 @@ h4 {
   font-family: "Roboto Slab", "Georgia", serif;
   font-weight: 300;
 }
+h5 {
+  font-size: 1em;
+  margin: 6px 0 6px 24px;
+  font-family: "Roboto Slab", "Georgia", serif;
+  font-weight: 300;
+}
 hr {
   border: none;
   border-top: 1px solid #e2e2e2;
@@ -93,6 +99,9 @@ ul.horizontal li {
 }
 ul.horizontal li:last-child {
   margin: 0;
+}
+ul.bullet {
+  list-style: square;
 }
 footer {
   margin: 96px 0 0 0;
@@ -124,45 +133,6 @@ footer {
 }
 .caption {
   margin: 6px 0;
-}
-
-
-
-h4.left + .horizontal {
-  margin: 25px 0 6px;
-  padding-left: 24px;
-}
-.bold {
-}
-#resume h4 {
-  color: #336d6d;
-  font-weight: 400;
-}
-h4 span {
-  white-space: nowrap;
-}
-h4 .light {
-}
-
-
-
-
-
-
-
-.light {
-  color: #999;
-}
-.right {
-  float: right;
-}
-.left {
-  float: left;
-}
-.clearfix {
-  clear: both;
-  overflow: auto;
-  zoom: 1;
 }
 
 
@@ -254,6 +224,53 @@ input[type=submit]:focus, input[type=submit]:hover {
 
 
 
+#resume h4 {
+  color: #336d6d;
+  font-weight: 400;
+  margin: 36px 0 12px;
+}
+#resume h5 {
+  color: #7d4343;
+  font-weight: 400;
+}
+#resume ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+#resume h5 + ul {
+  padding-left: 48px;
+}
+#resume li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#resume .horizontal li {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+#resume span, #resume a {
+  white-space: nowrap;
+}
+
+
+
+.light {
+  color: #999;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clearfix {
+  clear: both;
+  overflow: auto;
+  zoom: 1;
+}
+
+
+
 
 
 
@@ -294,6 +311,26 @@ input[type=submit]:focus, input[type=submit]:hover {
     float: left;
     width: 25%;
     margin: 0 24px 24px 0;
+  }
+  header *, #resume * {
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  header .subheader {
+    padding-top: 12px !important;
+    margin-top: 12px !important;
+    margin-bottom: 24px !important;
+  }
+  header ul, #resume ul {
+    margin: 0 !important;
+  }
+  #resume hr {
+    margin: 24px 0 !important;
+  }
+  #emailme {
+    display: none;
   }
 }
 
