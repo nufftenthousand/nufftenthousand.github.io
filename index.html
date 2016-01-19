@@ -38,17 +38,17 @@
         <h1><a href="index.html">Nate Duffy</a></h1>
         <nav class="contact">
           <ul class="horizontal">
-            <li><a href="mailto:nate.duffy@gmail.com" target="_blank">nate.duffy@gmail.com</a></li>
-            <li><a href="https://github.com/nufftenthousand" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nathanpduffy" target="_blank">LinkedIn</a></li>
-            <li><a href="resume.html">Resume</a></li>
+            <li class="email"></li>
+            <li class="phone"></li>
           </ul>
         </nav>
       </div>
       <div class="subheader clearfix">
         <h2>Full-Stack Web Developer and Code MacGyver</h2>
         <ul class="horizontal light">
-          <li>New Hampshire</li>
+          <li><a href="resume.html">resume</a></li>
+          <li><a href="https://github.com/nufftenthousand" target="_blank"><img alt="github" src="img/icons/github-light.png" class="icon">nufftenthousand</a></li>
+          <li><a href="https://www.linkedin.com/in/nathanpduffy" target="_blank"><img alt="linkedin" src="img/icons/linkedin-light.ico" class="icon">nathanpduffy</a></li>
         </ul>
       </div>
     </header>
@@ -104,8 +104,7 @@
     <hr>
     <div class="clearfix" id="emailme">
       <h3>Contact</h3>
-      <form id="formspree" action="//formspree.io/nate.duffy@gmail.com"
-        method="POST">
+      <form id="formspree" method="POST">
         <input type="text" name="_gotcha" style="display:none">
         <label for="name">Name</label>
         <input class="text-input" type="text" name="name">
@@ -125,7 +124,7 @@
         </div>
         <div id="form-error" class="form-message">
           <p>There was an error submitting the form.</p>
-          <p>Try sending an email to <a href="mailto:nate.duffy@gmail.com" target="_blank">nate.duffy@gmail.com</a> using your email client.</p>
+          <p>Try sending an email to <span class="email"></span> using your email client.</p>
           <p>...or <a href="javascript:void(0); // enable form" class="enable-form">try again</a></p>
         </div>
       </form>
@@ -134,10 +133,9 @@
   <footer class="clearfix">
     <nav class="contact">
       <ul class="horizontal">
-        <li><a href="mailto:nate.duffy@gmail.com" target="_blank">nate.duffy@gmail.com</a></li>
-        <li><a href="https://github.com/nufftenthousand" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/nathanpduffy" target="_blank">LinkedIn</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li class="email"></li>
+        <li><a href="https://github.com/nufftenthousand" target="_blank"><img alt="github" src="img/icons/github-light.png" class="icon">nufftenthousand</a></li>
+        <li><a href="https://www.linkedin.com/in/nathanpduffy" target="_blank"><img alt="linkedin" src="img/icons/linkedin-light.ico" class="icon">nathanpduffy</a></li>
       </ul>
     </nav>
     <p>Nate Duffy, 2016</p>
