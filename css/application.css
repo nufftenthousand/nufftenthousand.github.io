@@ -272,10 +272,17 @@ input[type=submit]:focus, input[type=submit]:hover {
   bottom: -0.16em;
   margin-right: 0.25em;
 }
+.subheader a {
+  color: #999;
+  text-decoration: none;
+}
+.subheader a:hover {
+  text-decoration: underline;
+}
 
 
 
-.light, .light a {
+.light {
   color: #999;
 }
 .right {
