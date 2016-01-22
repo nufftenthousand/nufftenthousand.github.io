@@ -1,0 +1,430 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+
+/************************** DEFAULTS */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  color: #48484a;
+  text-align: center;
+}
+header, footer, section, .hero {
+  overflow: auto;
+  clear: both;
+}
+a {
+  text-decoration: none;
+}
+.menu a {
+  display: block;
+  padding: 0.8em 0;
+  font-size: 1.8em;
+}
+strong {
+  font-weight: 800;
+}
+object {
+  pointer-events: none;
+}
+
+
+
+/************************** HEADER */
+header a {
+  color: #48484a;
+  text-transform: uppercase;
+}
+header .logo-link {
+  margin: 0 auto;
+  width: 140px;
+  height: 192px;
+}
+.toggle-icon {
+  font-size: 1.1em;
+}
+.toggle-menu-link {
+  display: block;
+  font-size: 1.2em;
+  padding: 0.6em 0;
+}
+.main.menu {
+  padding-bottom: 1em;
+}
+
+
+
+/************************** HERO */
+.hero {
+  width: 100%;
+  background-image: url(/img/hop-plant.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding: 2em 0;
+}
+.hero .button-link {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  background-color: rgba(97,71,142, 0.8);
+}
+.hero .button-link:hover {
+  background-color: rgb(97,71,142);
+}
+.tagline {
+  font-size: 2.5em;
+  color: #fff;
+}
+.tagline p {
+  margin: 1em 0;
+}
+.tagline span {
+  display: block;
+}
+
+
+
+/************************** CONTENT */
+section h1 {
+  margin: 1em 0;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+section {
+  padding: 1em 0;
+}
+section p {
+  font-size: 1em;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 75%;
+}
+.text.wrapper {
+  max-width: 800px;
+}
+.graphics.wrapper {
+  max-width: 1200px;
+}
+.text.wrapper p {
+  line-height: 1.7em;
+  margin-bottom: 2em;
+}
+
+
+
+/************************** BUCKETS */
+.bucket {
+  margin: 4em 0;
+}
+.bucket .icon {
+  margin: 1em 0;
+  height: 120px;
+}
+.bucket p {
+  margin: 1.2em 0 2em;
+}
+
+
+
+/************************** INSTAGRAM */
+.instagram {
+  font-size: 0;
+  margin: 50px auto;
+}
+.instapic-wrapper {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 7px;
+}
+.instapic {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #48484a;
+}
+.instagram .error {
+  font-size: initial;
+}
+
+
+
+/************************** FOOTER */
+footer .menu {
+  margin: 3.5em 0;
+}
+footer .menu a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.copyright {
+  font-size: 0.2em;
+  margin: 2em 0 5em;
+}
+footer .logo-wrapper {
+  width: 108px;
+  background-color: #48484a;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+footer .logo-link {
+  width: 108px;
+  height: 148px;
+}
+.logo-dock {
+  width: 100%;
+  position: relative;
+  font-size: 0;
+}
+.logo-dock .stub {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+.dark.stub {
+  overflow: hidden;
+}
+
+
+
+/************************** MODULES */
+.button-link {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+  color: #fff;
+  background-color: #60478e;
+  display: block;
+  padding: 0.5em;
+  width: 12em;
+  margin: 2em auto;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+.button-link:hover {
+  background-color: #70579e;
+}
+
+
+.logo-link {
+  display: inline-block;
+  position: relative;
+}
+.logo-link .logo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.logo {
+  display: block;
+}
+
+
+.loading {
+  width: 50px;
+  -webkit-animation: rotate 0.5s linear infinite;
+  animation: rotate 0.5s linear infinite;
+  display: none;
+}
+@-webkit-keyframes rotate {
+  0%   { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes rotate {
+  0%   { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+
+/************************** UTILITIES */
+.grey {
+  color: #fff;
+  background-color: #48484a;
+}
+.dark {
+  color: #fff;
+  background-color: #1d1d20;
+}
+.light {
+  color: #505052;
+  background-color: #fff;
+}
+.bold {
+  font-weight: 800;
+}
+.menu-hidden {
+  display: none;
+}
+.toggle-link-hidden {
+  display: none;
+}
+
+
+
+@media screen and (min-width: 35.5em) {
+
+  /************************** DEFAULTS */
+
+  /************************** HEADER */
+  header {
+    width: 90%;
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+  }
+  header a {
+    text-align: right;
+  }
+  .main-h1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 10px -3px #222;
+    background-color: #48484a;
+  }
+  header .logo-link {
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  header .logo-link:hover {
+    margin-top: 3px;
+  }
+  .toggle-menu-link {
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+  }
+  .main.menu {
+    float: right;
+    padding: 0 0 0 140px;
+  }
+
+  /************************** HERO */
+  .hero {
+    padding: 200px 0;
+  }
+  .tagline p {
+    display: inline-block;
+    margin: 0;
+  }
+  .tagline span {
+    display: inline;
+  }
+  .hero .tagline, .hero .button-link {
+    margin: 12px auto;
+  }
+
+  /************************** CONTENT */
+  section {
+    padding: 2.5em 0;
+  }
+
+  /************************** BUCKETS */
+  .bucket {
+    display: inline-block;
+    width: 30%;
+    padding: 0 12px;
+  }
+  .bucket .icon {
+    height: 120px;
+  }
+
+  /************************** INSTAGRAM */
+  .instapic-wrapper {
+    display: inline-block;
+    max-width: none;
+    width: 25%;
+    margin: 0;
+    padding: 0.5%;
+  }
+
+  /************************** FOOTER */
+  footer .menu {
+    margin: 50px 0;
+  }
+  .copyright {
+    margin: 50px 0;
+    font-size: 0.8em;
+  }
+
+  /************************** MODULES */
+
+  /************************** UTILITIES */
+
+}
+
+
+
+@media screen and (min-width: 64em) {
+
+  /************************** DEFAULTS */
+  .menu a {
+    display: inline-block;
+    padding: 0.8em;
+    font-size: 1.2em;
+  }
+
+  /************************** HEADER */
+  header {
+    width: 80%;
+    max-width: 1200px;
+  }
+  .toggle-menu-link {
+    display: none;
+  }
+  .main.menu {
+    display: block;
+  }
+  .main.menu a {
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+    padding: 1.8em 0.8em;
+  }
+  .main.menu a:hover {
+    background-color: #48484a;
+    color: #fff;
+    text-shadow: 0 0 3px #222;
+  }
+
+  /************************** HERO */
+
+  /************************** CONTENT */
+
+  /************************** BUCKETS */
+  .buckets h1 {
+    display: none;
+  }
+
+  /************************** INSTAGRAM */
+
+  /************************** FOOTER */
+  footer .menu a {
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  footer .menu a:hover {
+    color: #0d0d00;
+  }
+
+  /************************** MODULES */
+
+  /************************** UTILITIES */
+  .menu-hidden {
+    display: block;
+  }
+
+}
