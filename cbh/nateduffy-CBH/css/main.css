@@ -63,7 +63,7 @@ header .logo-link {
 /************************** HERO */
 .hero {
   width: 100%;
-  background-image: url(/img/hop-plant.png);
+  background-image: url(../img/hop-plant.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right center;
