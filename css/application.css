@@ -12,17 +12,43 @@ body {
   width: 90%;
   max-width: 800px;
 }
-.subheading {
+.subheader {
   padding: 24px 0;
-  margin: 36px 0;
+  margin: 12px 0 36px;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
 }
+.headline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.headline h1 {
+  line-height: 1;
+}
+.headline li {
+  line-height: 1.47;
+}
 h1 {
   font-size: 3.2em;
-  margin: 48px 0 24px;
+  margin: 36px 24px 12px 0;
   font-weight: 100;
   color: #336d6d;
+}
+h1 a {
+  text-decoration: none;
 }
 h2 {
   font-size: 1.5em;
@@ -36,6 +62,12 @@ h3 {
 h4 {
   font-size: 1em;
   margin: 24px 0 6px;
+  font-family: "Roboto Slab", "Georgia", serif;
+  font-weight: 300;
+}
+h5 {
+  font-size: 1em;
+  margin: 6px 0 6px 24px;
   font-family: "Roboto Slab", "Georgia", serif;
   font-weight: 300;
 }
@@ -57,6 +89,9 @@ p {
 ul {
   margin: 12px 0;
 }
+ul.bullet {
+  list-style: square;
+}
 ul.horizontal {
   overflow: auto;
   zoom: 1;
@@ -68,8 +103,11 @@ ul.horizontal li {
 ul.horizontal li:last-child {
   margin: 0;
 }
+header li {
+  white-space: nowrap;
+}
 footer {
-  margin: 36px 0 0 0;
+  margin: 96px 0 0 0;
   padding: 0 36px;
   background-color: #e2e2e2;
   border-top: #999;
@@ -78,8 +116,17 @@ footer {
 
 
 
+.grid {
+  font-size: 0;
+  text-align: center;
+}
 .item {
+  text-align: left;
+  font-size: initial;
+  display: inline-block;
+  vertical-align: top;
   width: 100%;
+  max-width: 300px;
   padding: 12px 36px 48px;
 }
 .frame {
@@ -102,27 +149,10 @@ footer {
 
 
 
-.light {
-  color: #999;
-}
-.right {
-  float: right;
-}
-.left {
-  float: left;
-}
-.clearfix {
-  clear: both;
-  overflow: auto;
-  zoom: 1;
-}
-
-
-
 form {
   width: 90%;
   max-width: 500px;
-  margin: 0 auto 48px;
+  margin: 0 auto;
 }
 form a {
   color: #73adad;
@@ -174,9 +204,10 @@ input[type=submit] {
   border-radius: 0;
   padding: 6px 12px;
   width: 70%;
-  margin: 48px auto 0;
+  margin: 48px auto 6px;
+  cursor: pointer;
 }
-input[type=submit]:focus {
+input[type=submit]:focus, input[type=submit]:hover {
   outline: 1px solid #73adad;
 }
 .form-message {
@@ -205,36 +236,127 @@ input[type=submit]:focus {
 
 
 
+#resume h4 {
+  color: #336d6d;
+  font-weight: 400;
+  margin: 36px 0 12px;
+}
+#resume h5 {
+  color: #7d4343;
+  font-weight: 400;
+}
+#resume ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+#resume h5 + ul {
+  padding-left: 48px;
+}
+#resume li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#resume .horizontal li {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+#resume span, #resume a {
+  white-space: nowrap;
+}
+#resume .clearfix + *, #resume .clearfix + ul > li {
+  margin-top: 0;
+}
+#resume .horizontal + h4 {
+  margin-top: 24px;
+}
+#resume h4 + .clearfix + h4 {
+  margin-top: 12px;
+}
+
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  position: relative;
+  bottom: -0.16em;
+  margin-right: 0.25em;
+}
+.subheader a {
+  color: #999;
+  text-decoration: none;
+}
+.subheader a:hover {
+  text-decoration: underline;
+}
+
+
+
+.light {
+  color: #999;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clearfix {
+  clear: both;
+  overflow: auto;
+  zoom: 1;
+}
+
+
+
+
+
+
 @media screen and (min-width: 35.5em) {
-  .contact {
+
+  footer .contact {
     float: right;
   }
+  .grid {
+    text-align: left;
+  }
   .item {
+    max-width: none;
     width: 50%;
-    float: left;
     padding: 12px 48px 48px;
   }
+
 }
 
 
 
 @media screen and (min-width: 64em) {
+
   .item {
     width: 33.33%;
     padding: 12px 36px 48px;
   }
+
 }
 
 
 
 @media print {
+
+  h1 {
+    margin-top: 12px;
+  }
+  .subheader {
+    margin-bottom: 24px;
+  }
   h4 {
     margin-top: 0;
   }
   .item {
+    display: block;
     padding: 12px 0;
     float: none;
     width: auto;
+    max-width: none;
     clear: both;
     margin-bottom: 36px;
   }
@@ -243,5 +365,19 @@ input[type=submit]:focus {
     width: 25%;
     margin: 0 24px 24px 0;
   }
+
+  #resume h3 {
+    margin-bottom: 0;
+  }
+  #resume h4, #resume .horizontal + h4 {
+    margin-top: 12px;
+  }
+  #resume ul {
+    margin-bottom: 12px;
+  }
+  #resume hr {
+    margin: 24px 0;
+  }
+
 }
 
