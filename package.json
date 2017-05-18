@@ -1,0 +1,43 @@
+{
+  "name": "Portfolio",
+  "version": "5.0.0",
+  "description": "this is my relishable website. i really like relish.",
+  "main": "index.js",
+  "repository": "git@github.com:nufftenthousand/nufftenthousand.github.com",
+  "author": "Nate Duffy <nate.duffy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.5",
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.16.1",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^4.5.0",
+    "onchange": "^3.2.1",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^3.0.0-beta",
+    "svg-sprite-generator": "^0.0.7",
+    "svgo": "^0.7.2",
+    "uglify-js": "^2.7.5"
+  },
+  "scripts": {
+    "scss": "mkdir -p dist/css && node-sass --output-style compressed -o dist/css ass/sass && echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/* && echo 'AUTOPREFIXERRRRRRR'",
+
+    "lint": "eslint ass/js && echo 'LINTINGGGGGGG'",
+    "uglify": "mkdir -p dist/js && uglifyjs ass/js/*.js -m -o dist/js/main.js && uglifyjs ass/js/*.js -m -c -o dist/js/main.min.js && echo 'OOOOOOOOOOOOOOOOOOOOOOOOOOOO'",
+
+    "imagemin": "imagemin ass/images dist/images -p",
+    "icons": "svgo -f ass/images/icons && mkdir -p dist/images && svg-sprite-generate -d ass/images/icons -o dist/images/icons.svg",
+
+    "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js, *.html'",
+
+    "build:css": "yarn run scss && yarn run autoprefixer",
+    "build:js": "yarn run lint && yarn run uglify",
+    "build:images": "yarn run imagemin && yarn run icons",
+    "build:all": "yarn run build:css && yarn run build:js && yarn run build:images",
+
+    "watch:css": "onchange 'ass/sass/**/*.scss' -- yarn run build:css",
+    "watch:js": "onchange 'ass/js/**/*.js' -- yarn run build:js",
+    "watch:all": "parallelshell 'yarn run serve' 'yarn run watch:css' 'yarn run watch:js'"
+  }
+}
