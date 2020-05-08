@@ -1,0 +1,17 @@
+.sun {
+  $diameter: 8vw;
+  $min: 48px;
+
+  content: '';
+  width: $diameter;
+  height: $diameter;
+  min-width: $min;
+  min-height: $min;
+  background-color: $yellow;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 8vh;
+  right: 26vw;
+  transform: translateX(50%) translateY(-50%);
+}

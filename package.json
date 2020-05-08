@@ -26,15 +26,11 @@
     "lint": "eslint ass/js && echo 'LINTINGGGGGGG'",
     "uglify": "mkdir -p dist/js && uglifyjs ass/js/*.js -m -o dist/js/main.js && uglifyjs ass/js/*.js -m -c -o dist/js/main.min.js && echo 'OOOOOOOOOOOOOOOOOOOOOOOOOOOO'",
 
-    "imagemin": "imagemin ass/images dist/images -p",
-    "icons": "svgo -f ass/images/icons && mkdir -p dist/images && svg-sprite-generate -d ass/images/icons -o dist/images/icons.svg",
-
     "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js, *.html'",
 
     "build:css": "yarn run scss && yarn run autoprefixer",
     "build:js": "yarn run lint && yarn run uglify",
-    "build:images": "yarn run imagemin && yarn run icons",
-    "build:all": "yarn run build:css && yarn run build:js && yarn run build:images",
+    "build:all": "yarn run build:css && yarn run build:js",
 
     "watch:css": "onchange 'ass/sass/**/*.scss' -- yarn run build:css",
     "watch:js": "onchange 'ass/js/**/*.js' -- yarn run build:js",

@@ -1,0 +1,40 @@
+.symbol {
+  height: 100%;
+  width: 100%;
+  //background-color: $blue;
+  //background-image: linear-gradient(to bottom, $blue, $teal);
+  position: relative;
+
+  /*
+  &:after {
+    content: '';
+    width: 30%;
+    height: 30%;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $bellow;
+  }
+  */
+  &:before {
+    content: '';
+    width: 30%;
+    height: 30%;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $yellow;
+    transition: all ease-out 10s;
+  }
+
+    &:hover {
+      &:before {
+        background-color: $bellow;
+      }
+    }
+}

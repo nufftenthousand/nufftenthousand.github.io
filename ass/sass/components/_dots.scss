@@ -1,0 +1,34 @@
+.dots {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-image: radial-gradient($brown 4px, transparent 4px, transparent);
+  background-size: 4px 48px;
+  height: 48px;
+  width: 33.33%;
+}
+
+.lines {
+  height: 330px;
+  width: 40%;
+  background-image: linear-gradient(to bottom, $pink 1.5px, transparent 1.5px, transparent);
+  background-position: left 8px;
+  background-size: 100% 28px;
+  float: left;
+}
+
+.content {
+  padding: 1rem;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 300;
+  color: $white;
+  float: left;
+  width: 40%;
+  min-width: 288px;
+
+  a {
+    color: white;
+    background-image: linear-gradient(to right, $green, $green-alt);
+    padding: 0.125em 0.5em;
+  }
+}

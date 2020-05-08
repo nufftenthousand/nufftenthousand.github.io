@@ -1,0 +1,50 @@
+$deco-height: 26vh;
+$content-height: 100vh - $deco-height;
+
+.content {
+  overflow: scroll;
+  padding: 0 1rem;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 300;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  height: $content-height;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    //background-image: linear-gradient(to right, $green, $green-alt);
+    //background: $green-alt;
+    padding: 0.0625em 0.5em 0.125em;
+    background-image: linear-gradient(to right, $blue, $teal 25%, $green-alt 75%, $green-alt);
+    background-size: 400%;
+    background-position: right center;
+    transition: all 270ms ease;
+
+    &:hover {
+      //background-color: $green;
+      //background-image: linear-gradient(to right, $blue, $teal);
+      background-position: left center;
+    }
+  }
+}
+
+.deco {
+  //background-image: linear-gradient(to bottom, $blue, $teal);
+  height: $deco-height;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: background-color 15s ease-in;
+
+  &:hover {
+    background-color: $grey;
+  }
+}
+
+.teaser {
+  margin: 3rem 0;
+  max-width: 24rem;
+}

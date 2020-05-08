@@ -1,0 +1,17 @@
+.texture {
+  $line-width: 1.5px;
+  $gap: 14px;
+  $repeat: $line-width + $gap;
+  $tally: 12;
+
+  height: 70%;
+  width: 40vw;
+  background-image: linear-gradient(to bottom, $pink $line-width, transparent $line-width, transparent);
+  background-position: left 8px;
+  background-size: 100% $repeat;
+  position: absolute;
+  top: 2vh; // 0;
+  //bottom: 8vh;
+  left: 0;
+  z-index: 2;
+}
